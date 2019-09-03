@@ -1,15 +1,13 @@
-package tests;
+package helper;
 
 import java.io.File;
 import java.io.IOException;
 
-public class FileDownloader {
+public class CreateDir {
 
-    private static final String TAG = "Pouya";
-
-    public static void download(String url, String path) {
-
+    public static void creat(String path) {
         try {
+
 
             String directory = path.substring(0, path.lastIndexOf("/"));
             String fileName = path.substring(path.lastIndexOf("/") + 1);
@@ -20,8 +18,5 @@ public class FileDownloader {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
-
-
 }
